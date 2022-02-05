@@ -22,7 +22,7 @@ class DeleteMessageCommand(BaseRSMQCommand):
         ''' Exec Command '''
         result = self.get_transaction().execute()
 
-        if int(result[0]) == 1 and int(result[1]) > 0:
+        if int(result[0]) == 1 and int(result[1]) == 3:
             return True
 
         return False
